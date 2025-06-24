@@ -125,7 +125,6 @@ function deleteLast() {
 }
 
 function calculate() {
-    console.log('Equals button pressed.');
     let expression = display.value;
 
     // Dont calc if display is 0 or empty
@@ -133,7 +132,6 @@ function calculate() {
         return;
     }
 
-    alert('Equals button was clicked');
     // Dont calc if expression ends with operator
     if (isOperator(getLastChar())){
         return;
@@ -187,7 +185,7 @@ document.addEventListener('keydown', function(event) {
     } else if (event.key === 'Backspace') {
         deleteLast();
     }
-});
+})
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Calculator loaded successfully');
@@ -198,3 +196,4 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.log('Display element not found');
     }
+})
